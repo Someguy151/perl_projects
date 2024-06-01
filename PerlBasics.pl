@@ -112,3 +112,18 @@ if ($a > $b) {
     print "A is equal to B";  # braces are not required for single lines
 }
 =cut
+
+# =for comment
+# Subroutines
+my $sub_value = &factorial(7);
+print "$sub_value";
+
+sub factorial {
+    my ($n) = @_;
+    if ($n <= 2) {
+        return $n;
+    } else {
+        $n * factorial($n-1);
+    }
+}
+# =cut
