@@ -53,27 +53,6 @@ print "$hash_example{key2}\n";
 my $var1 = "AB";
 my $var2 = "CD";
 
-my $var3 = $var1.$var2;
-print "Concatenation: $var3\n";
-
-$var1 .= " ";      # equivalent to $var1 = $var1." "
-$var1 x= 10;       # $var1.$var1... 10 times
-print "Repetition: $var1\n";
-
-my $var = "this is an example";
-my @array_example = split(/ /, $var);
-print "Split example: $array_example[-1]\n";
-
-my @sorted_array = sort @array_example;
-my @reversed_sorted_array = reverse sort @array_example;
-print "@sorted_array\n@reverse_sorted_array\n";
-=cut
-
-# =for comment
-# Operators
-my $var1 = "AB";
-my $var2 = "CD";
-
 my $var3 = $var1 . $var2;
 print "Concatenation: $var3\n";
 
@@ -88,4 +67,48 @@ print "Split example: $array_example[-1]\n";
 my @sorted_array = sort @array_example;
 my @reversed_sorted_array = reverse sort @array_example;
 print "Sorted array: @sorted_array\nReversed sorted array: @reversed_sorted_array\n";
-# =cut
+=cut
+
+=for comment
+# Loops
+print "\nFor loop using C like syntax: \n\n";
+for (my $i = 0; $i <= 10; $i++) {
+    print "$i\n";
+}
+
+print "\nFor loop using foreach syntax: \n\n";
+foreach my $i (0..10) {
+    print "$i\n";
+}
+
+print "\nFor loop using underscore syntax: \n\n";
+foreach $_ (0..10) {
+    print "$_\n";
+}
+
+print "\nFor loop on a hash: \n\n";
+my %hash = (Key1 => "Value1", Key2 => "Value2", Key3 => "Value3");
+foreach my $key(keys %hash) {
+    print "The $key is $hash{$key}\n";
+}
+
+print "\nFor loop on a hash with underscore syntax: \n\n";
+my %hash = (Key1 => "Value1", Key2 => "Value2", Key3 => "Value3");
+foreach $_ (keys %hash) {
+    print "The $_ is $hash{$_}\n";
+}
+
+=cut
+
+=for comment
+# Conditional Statements
+my $a = 5;
+my $b = 6;
+if ($a > $b) {
+    print "A is greater than B";
+} elsif ($a < $b) {
+    print "A is less than B";
+} else {
+    print "A is equal to B";  # braces are not required for single lines
+}
+=cut
