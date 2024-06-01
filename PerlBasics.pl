@@ -35,7 +35,7 @@ pop @array_numbers;                       # removes an item from the end
 print "@array_numbers\n";
 =cut
 
-# =for comment
+=for comment
 # Hashes
 my %hash_example = (
     key1 => "value1", 
@@ -46,4 +46,46 @@ print "$hash_example{key1}\n";
 
 $hash_example{key2} = "NewValue2";
 print "$hash_example{key2}\n";
+=cut
+
+=for comment
+# Operators
+my $var1 = "AB";
+my $var2 = "CD";
+
+my $var3 = $var1.$var2;
+print "Concatenation: $var3\n";
+
+$var1 .= " ";      # equivalent to $var1 = $var1." "
+$var1 x= 10;       # $var1.$var1... 10 times
+print "Repetition: $var1\n";
+
+my $var = "this is an example";
+my @array_example = split(/ /, $var);
+print "Split example: $array_example[-1]\n";
+
+my @sorted_array = sort @array_example;
+my @reversed_sorted_array = reverse sort @array_example;
+print "@sorted_array\n@reverse_sorted_array\n";
+=cut
+
+# =for comment
+# Operators
+my $var1 = "AB";
+my $var2 = "CD";
+
+my $var3 = $var1 . $var2;
+print "Concatenation: $var3\n";
+
+$var1 .= " ";      # equivalent to $var1 = $var1 . " "
+$var1 = $var1 x 10; # correct syntax for repetition
+print "Repetition: $var1\n";
+
+my $var = "this is an example";
+my @array_example = split(/ /, $var);
+print "Split example: $array_example[-1]\n";
+
+my @sorted_array = sort @array_example;
+my @reversed_sorted_array = reverse sort @array_example;
+print "Sorted array: @sorted_array\nReversed sorted array: @reversed_sorted_array\n";
 # =cut
