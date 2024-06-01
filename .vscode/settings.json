@@ -1,5 +1,23 @@
 {
     "code-runner.executorMap": {
         "perl": "perl"
+    },
+    "perl": {
+        "enable": true,
+        "path": "perl",
+        "perlCmd": "perl",
+        "perltidyCmd": "perltidy",
+        "perlcriticCmd": "perlcritic",
+        "enableLsp": true,
+        "lspServerPath": "perl",
+        "lspServerArgs": [
+        "-MPerl::LanguageServer",
+        "-e",
+        "Perl::LanguageServer::run",
+        "--",
+        "--port 13603",
+        "--nostdio 1",
+        "--loglevel 2"
+        ]
     }
 }
