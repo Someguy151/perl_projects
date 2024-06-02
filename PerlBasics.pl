@@ -1,6 +1,11 @@
 #!/usr/bin/env perl
 
 # Author: Jonathan Hooper
+# Date: May 2024
+# Course: Power of Perl by Robin Garg
+
+use strict;
+use warnings;
 
 =for comment
 # Scalars
