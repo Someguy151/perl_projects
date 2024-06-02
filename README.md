@@ -34,7 +34,7 @@ perl -v
 1. **Clone the repository**:
 
 ```sh
-git clone https://github.com/someguys151/perl_projects.git
+git clone https://github.com/Someguy151/perl_projects.git
 cd perl_projects
 ```
 
