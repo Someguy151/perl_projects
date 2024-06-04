@@ -1,16 +1,22 @@
 #!/usr/bin/env perl
 
-# Author: Jonathan Hooper
-# Date: Jun 2024
-# Course: Power of Perl by Robin Garg
-
 use strict;
 use warnings;
-use Getopt::Long;
+use FindBin;
+use lib "$FindBin::Bin/../lib";
+use MyApp::FileOperations;
 
+# Determine base directory
+my $base_dir = "$FindBin::Bin/..";
 
-my $input_file;
-GetOptions("input|i=s"=>\$input_file);
+# Paths
+my $input_file = "$base_dir/data/input_file.txt";
+my $output_file = "$base_dir/Outputs/output_file.txt";
+
+# Use the module to perform file operations
+MyApp::FileOperations::process_files($input_file, $output_file);
+
+# GetOptions("input|i=s"=>\$input_file);
 
 # Example of reading a file
 my @input_file_details;
@@ -31,13 +37,11 @@ foreach (@input_file_details) {
 }
 
 # Example of writing to a file
-my $output_file = "Outputs/FileOutput.txt";
 open (my $output_fh, '>', $output_file) or die "Cannot open $output_file for writing \n";
 print $output_fh @input_file_details;
 close $output_fh;
 
 # Example of appending to a file
-my $output_file = "Outputs/FileOutput.txt";
-open (my $output_fh, '>>', $output_file) or die "Cannot open $output_file for appending \n";
+open ($output_fh, '>>', $output_file) or die "Cannot open $output_file for appending \n";
 print $output_fh @input_file_details;
 close $output_fh;

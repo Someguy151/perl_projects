@@ -7,14 +7,19 @@
 use strict;
 use warnings;
 use Getopt::Long;
+use FindBin;
+use lib "$FindBin::Bin/../lib";
 
 use Spreadsheet::WriteExcel;
 use Spreadsheet::ParseExcel;
 
+# Determine base directory
+my $base_dir = "$FindBin::Bin/..";
+
 # Writing to Excel
 # Note: You can not do both read and write operations at the same time
 #       Finish one operation (read XOR write) before starting another.
-my $output_xls = "Outputs/output_xls.xls";
+my $output_xls = "$base_dir/Outputs/output_xls.xls";
 my $workbook = Spreadsheet::WriteExcel->new($output_xls) or die "Cannot create workbook: $!";
 
 print "Processing $output_xls for writing\n";

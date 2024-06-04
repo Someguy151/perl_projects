@@ -36,3 +36,22 @@ inc/
 
 # macOS
 .DS_Store
+
+# General
+*.log
+*.tmp
+*.swp
+*~
+*.bak
+
+# Database
+*.pgpass
+*.sql
+*.dump
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Node.js (if using Node.js in your project)
+node_modules/

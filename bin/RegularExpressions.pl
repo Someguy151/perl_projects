@@ -6,6 +6,11 @@
 
 use strict;
 use warnings;
+use FindBin;
+use lib "$FindBin::Bin/../lib";
+
+# Determine base directory
+my $base_dir = "$FindBin::Bin/..";
 
 my $line_in_a_file = "I am preparing for an interview";
 if ($line_in_a_file =~ /INTERVIEW/) {
@@ -34,8 +39,9 @@ if ($line_in_a_file =~ /^(\w+)\s*(\w+)/) {
     print "FW = $FW and SW = $SW\n";
 }
 
-my $input_file = "Inputs/input_file.txt";
-my $output_file = "Outputs/output_file.txt";
+# Paths
+my $input_file = "$base_dir/data/input_file.txt";
+my $output_file = "$base_dir/Outputs/output_file.txt";
 
 open(my $output_fh, '>', $output_file) or die "cannot open $output_file for writing: $!\n";
 open(my $input_fh, '<', $input_file) or die "cannot open $input_file for reading: $!\n";
