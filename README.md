@@ -1,94 +1,67 @@
-# Perl Projects
+# My Perl Projects
 
-Welcome to the `perl_projects` repository! This repository contains a collection of Perl scripts and projects demonstrating various aspects of Perl programming.
+## Overview
+This project contains a collection of Perl scripts and modules for various operations, including file handling, HTML generation, and database interactions. The scripts are organized into executable scripts, modules, input data files, and output files.
 
-## Table of Contents
+## Directory Structure
+- `bin/`: Executable scripts.
+- `lib/`: Perl modules.
+- `data/`: Input data files.
+- `Outputs/`: Output files.
+- `.vscode/`: VSCode settings.
+- `t/`: Test scripts (recommended).
+- `docs/`: Documentation (recommended).
+- `config/`: Configuration files (recommended).
 
-- [Introduction](#introduction)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Projects](#projects)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-
-## Introduction
-
-This repository is a collection of Perl scripts and projects that showcase different features and capabilities of the Perl programming language. Whether you are a beginner looking to learn Perl or an experienced developer looking for sample scripts, this repository has something for you.
-
-## Prerequisites
-
-To run the scripts in this repository, you will need:
-
-- Perl 5.10 or higher installed on your system. You can check your Perl version with:
-
+## Setup
+1. **Clone the repository:**
+   
 ```sh
-perl -v
+git clone https://github.com/Someguy151/my_perl_project.git
+cd my_perl_project
 ```
 
-- Some scripts may require additional Perl modules. These modules can be installed using CPAN or `cpanm`.
-
-## Installation
-
-1. **Clone the repository**:
+2. **Install necessary Perl modules:**
 
 ```sh
-git clone https://github.com/Someguy151/perl_projects.git
-cd perl_projects
+cpanm --installdeps .
 ```
-
-2. **Install necessary modules**:
-   Each project may have its own dependencies. Navigate to the project directory and install required modules using CPAN or `cpanm`. For example:
-
-```sh
-cpanm Module::Name
-```
-
-## Projects
-
-Here are some of the projects included in this repository:
-
-1. **Project 1: Example Script**
-   - Description: A simple script demonstrating basic Perl syntax and operations.
-   - File: `PerlBasics.pl`
-   
-2. **Project 2: File Processing**
-   - Description: Scripts for reading, writing, and processing files.
-   - Files: `FileOperations.pl`
-   
-3. **Project 3: Spreadsheets**
-   - Description: Scripts for interacting with spreadsheets using Perl.
-   - File: `-.pl`
-   
 
 ## Usage
-
-To run a script, navigate to the project directory and execute the script using Perl. For example:
+- To run a specific script, use the Perl interpreter:
 
 ```sh
-perl PerlBasics.pl
+perl bin/HTMLFormatted.pl
 ```
 
-Some scripts may require command-line arguments or specific configurations. Refer to the comments within each script for detailed usage instructions.
+### Scripts
+- **ExcelFormatting.pl**: Script for formatting Excel files.
+- **ExcelOperations.pl**: Script for performing various operations on Excel files.
+- **FileOperations.pl**: Script for file handling operations.
+- **hello.pl**: A simple hello world script.
+- **HTMLFormatted.pl**: Script for generating formatted HTML content.
+- **PerlBasics.pl**: Basic Perl script demonstrating fundamental Perl features.
+- **RegularExpressions.pl**: Script demonstrating the use of regular expressions in Perl.
+- **SQLOperations.pl**: Script for performing SQL operations.
+
+### Modules
+- **MyApp::FileOperations**: Module for file operations.
+- **MyApp::HTMLHandler**: Module for handling and generating HTML content.
+
+### Example
+Here’s how you can use the `HTMLFormatted.pl` script:
+
+```sh
+perl bin/HTMLFormatted.pl
+```
+
+This will generate an HTML file at `Outputs/output_html.html`.
 
 ## Contributing
-
-Contributions are welcome! If you have a Perl script or project that you would like to add, please follow these steps:
-
 1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Commit your changes and push to your branch.
-4. Create a pull request with a detailed description of your changes.
-
-Please ensure your code adheres to the existing style and includes comments for clarity.
+2. Create a new branch.
+3. Make your changes.
+4. Create a pull request.
 
 ## License
-
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
-## Acknowledgements
-
-Thank you to all the contributors who have helped make this repository a valuable resource for Perl developers.
-
-Happy coding!
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

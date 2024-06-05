@@ -55,3 +55,6 @@ inc/
 
 # Node.js (if using Node.js in your project)
 node_modules/
+
+# Output files
+/Outputs/*
