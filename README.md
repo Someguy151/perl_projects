@@ -9,9 +9,9 @@ This project contains a collection of Perl scripts and modules for various opera
 - `data/`: Input data files.
 - `Outputs/`: Output files.
 - `.vscode/`: VSCode settings.
-- `t/`: Test scripts (recommended).
-- `docs/`: Documentation (recommended).
-- `config/`: Configuration files (recommended).
+- `t/`: Test scripts.
+- `docs/`: Documentation.
+- `config/`: Configuration files (not yet implemented).
 
 ## Setup
 1. **Clone the repository:**
